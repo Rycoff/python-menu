@@ -7,7 +7,7 @@ while True:
         Help Section:
         -------------
         help    -->    Show the help section
-        menu    -->    Show the menu
+        menu    -->    Open menu
         exit    -->    Exit the program
         ''')
     elif command == 'menu':
@@ -18,7 +18,7 @@ while True:
         2. Option 2
         3. Option 3
         4. Option 4
-        5. Exit
+        5. Back
         ''')
         while True:
             ans = input('Select an number: ')
@@ -31,7 +31,7 @@ while True:
             elif ans == '4':
                 print('Execute option 4')
             elif ans == '5':
-                print('Good bye')
+                print('Returning')
                 break
             else:
                 print('This number does not exist')
