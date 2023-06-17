@@ -1,4 +1,6 @@
-print('''Welcome to this simple menu. To start, type help.''')
+import os
+
+print('''This is a simple menu. To start, type help.''')
 
 while True:
     command = input('Option: ')
@@ -8,17 +10,20 @@ while True:
         -------------
         help    -->    Show the help section
         menu    -->    Open menu
+        clear   -->    Clear the screen
         exit    -->    Exit the program
         ''')
     elif command == 'menu':
         print('''
         Menu:
         -----
-        1. Option 1
-        2. Option 2
-        3. Option 3
-        4. Option 4
-        5. Back
+        1) Option 1
+        2) Option 2
+        3) Option 3
+        4) Option 4
+        5) Option 5
+        
+        99) Exit
         ''')
         while True:
             ans = input('Select an number: ')
@@ -31,10 +36,14 @@ while True:
             elif ans == '4':
                 print('Execute option 4')
             elif ans == '5':
+                print('Execute option 5')
+            elif ans == '99':
                 print('Returning')
                 break
             else:
                 print('This number does not exist')
+    elif command == 'clear':
+        os.system('clear')
     elif command == 'exit':
         print('Good bye')
         exit()
